@@ -9,4 +9,6 @@ Udacity - [Intro To Machine Learning](https://eu.udacity.com/course/intro-to-mac
 
 There is a mini-project at the end of each lesson that is located under the projects folder
 
+## Setup
+
 Run /projects/tools/startup.py file to install/download all the dependencies
