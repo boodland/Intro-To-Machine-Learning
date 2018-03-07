@@ -11,4 +11,6 @@ There is a mini-project at the end of each lesson that is located under the proj
 
 ## Setup
 
-Run /projects/tools/startup.py file to install/download all the dependencies
+Run /projects/tools/startup.py file to install/download all the dependencies.
+
+It will first check for the python modules, then download and unzip a large dataset that we will use heavily later. The download/unzipping can take a while.
