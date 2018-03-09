@@ -19,6 +19,9 @@ from sklearn.metrics import accuracy_score
 ### labels_train and labels_test are the corresponding item labels
 features_train, features_test, labels_train, labels_test = preprocess()
 
+features_train = features_train[:int(len(features_train)/10)] 
+labels_train = labels_train[:int(len(labels_train)/10)] 
+
 def runModel(kernel="linear", C='1', gamma=f'{1/len(features_train)}'):
     print(f'kernel={kernel} C={C} gamma={gamma}')
     clf = SVC(kernel=kernel, C=float(C), gamma=float(gamma))
