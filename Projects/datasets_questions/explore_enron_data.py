@@ -27,3 +27,7 @@ enron_data_person_features = set(
 )
 print(len(enron_data_person_features))
 print(enron_data_person_features)
+
+enron_data_poi = [person for person in enron_data_persons if enron_data[person]["poi"]]
+print(len(enron_data_poi))
+print(enron_data_poi)
