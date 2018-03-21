@@ -50,3 +50,7 @@ print(f"James Prentice's total stock value = {enron_data['PRENTICE JAMES']['tota
 print(f"Wesley Colwell's email messages to poi = {enron_data['COLWELL WESLEY']['from_this_person_to_poi']}")
 
 print(f"Jeffrey K Skilling's value of stock options exercised = {enron_data['SKILLING JEFFREY K']['exercised_stock_options']}")
+
+print(f"Kenneth L Lay's total payments = {enron_data['LAY KENNETH L']['total_payments']}")
+print(f"Jeffrey K Skilling's total payments = {enron_data['SKILLING JEFFREY K']['total_payments']}")
+print(f"Andrew S Fastow's total payments = {enron_data['FASTOW ANDREW S']['total_payments']}")
