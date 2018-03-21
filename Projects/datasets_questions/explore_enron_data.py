@@ -24,15 +24,15 @@ def print_data_info(title, data):
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "rb"))
 
-enron_data_persons = [person for person in enron_data.keys()]
-print_data_info('ENRON PERSONS', enron_data_persons)
+enron_data_people = [person for person in enron_data.keys()]
+print_data_info('ENRON PEOPLE', enron_data_people)
 
 enron_data_person_features = set(
-    [feature for person in enron_data_persons for feature in enron_data[person].keys()]
+    [feature for person in enron_data_people for feature in enron_data[person].keys()]
 )
 print_data_info('ENRON PERSON''S FEATURES', enron_data_person_features)
 
-enron_data_pois = [person for person in enron_data_persons if enron_data[person]["poi"]]
+enron_data_pois = [person for person in enron_data_people if enron_data[person]["poi"]]
 print_data_info('ENRON POIS', enron_data_pois)
 
 with open("../final_project/poi_names.txt", 'r') as f:
@@ -55,12 +55,12 @@ print(f"Kenneth L Lay's total payments = {enron_data['LAY KENNETH L']['total_pay
 print(f"Jeffrey K Skilling's total payments = {enron_data['SKILLING JEFFREY K']['total_payments']}")
 print(f"Andrew S Fastow's total payments = {enron_data['FASTOW ANDREW S']['total_payments']}")
 
-enron_data_person_with_quantified_salary = {person: enron_data[person]['salary'] for person in enron_data_persons if enron_data[person]['salary'] != 'NaN'}
-print_data_info('ENRON PERSONS WITH QUALIFIED SALARY', enron_data_person_with_quantified_salary)
+enron_data_people_with_quantified_salary = {person: enron_data[person]['salary'] for person in enron_data_people if enron_data[person]['salary'] != 'NaN'}
+print_data_info('ENRON PEOPLE WITH QUANTIFIED SALARY', enron_data_people_with_quantified_salary)
 
-enron_data_person_with_email_address = {person: enron_data[person]['email_address'] for person in enron_data_persons if enron_data[person]['email_address'] != 'NaN'}
-print_data_info('ENRON PERSONS WITH EMAIL ADDRESS', enron_data_person_with_email_address)
+enron_data_people_with_email_address = {person: enron_data[person]['email_address'] for person in enron_data_people if enron_data[person]['email_address'] != 'NaN'}
+print_data_info('ENRON PEOPLE WITH EMAIL ADDRESS', enron_data_people_with_email_address)
 
-enron_data_persons_without_quantified_salary= enron_data_persons - enron_data_person_with_quantified_salary.keys()
-print_data_info('ENRON PERSONS WITHOUT QUALIFIED SALARY', enron_data_persons_without_quantified_salary)
-print(f"% OF TOTAL: {len(enron_data_persons_without_quantified_salary)/len(enron_data_persons)}")
+enron_data_people_without_quantified_salary= enron_data_people - enron_data_people_with_quantified_salary.keys()
+print_data_info('ENRON PEOPLE WITHOUT QUANTIFIED SALARY', enron_data_people_without_quantified_salary)
+print(f"% OF TOTAL: {len(enron_data_people_without_quantified_salary)/len(enron_data_people)}")
