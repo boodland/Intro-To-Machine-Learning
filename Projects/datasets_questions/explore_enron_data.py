@@ -17,3 +17,7 @@
 import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "rb"))
+
+enron_data_persons = [person for person in enron_data.keys()]
+print(len(enron_data_persons))
+print(enron_data_persons)
