@@ -64,3 +64,7 @@ print_data_info('ENRON PEOPLE WITH EMAIL ADDRESS', enron_data_people_with_email_
 enron_data_people_without_quantified_salary= enron_data_people - enron_data_people_with_quantified_salary.keys()
 print_data_info('ENRON PEOPLE WITHOUT QUANTIFIED SALARY', enron_data_people_without_quantified_salary)
 print(f"% OF TOTAL: {len(enron_data_people_without_quantified_salary)/len(enron_data_people)}")
+
+enron_data_pois_without_total_payments = [person for person in enron_data_pois if enron_data[person]['total_payments'] == 'NaN']
+print_data_info('ENRON POIs WITHOUT TOTAL SALARY', enron_data_pois_without_total_payments)
+print(f"% OF TOTAL POIs: {len(enron_data_pois_without_total_payments)/len(enron_data_pois)}")
