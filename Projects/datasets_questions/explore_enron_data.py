@@ -48,3 +48,5 @@ print_data_info('ENRON POIS IN POI CANDIDATES', enron_data_pois_in_poi_names)
 print(f"James Prentice's total stock value = {enron_data['PRENTICE JAMES']['total_stock_value']}")
 
 print(f"Wesley Colwell's email messages to poi = {enron_data['COLWELL WESLEY']['from_this_person_to_poi']}")
+
+print(f"Jeffrey K Skilling's value of stock options exercised = {enron_data['SKILLING JEFFREY K']['exercised_stock_options']}")
