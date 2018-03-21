@@ -44,3 +44,5 @@ print_data_info('POI CANDIDATES', poi_names_dictionary)
 
 enron_data_pois_in_poi_names = [enron_data_poi for poi_name in poi_names_dictionary.keys() for enron_data_poi in enron_data_pois if poi_name in enron_data_poi]
 print_data_info('ENRON POIS IN POI CANDIDATES', enron_data_pois_in_poi_names)
+
+print(f"James Prentice's total stock value = {enron_data['PRENTICE JAMES']['total_stock_value']}")
