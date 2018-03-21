@@ -18,9 +18,9 @@ import pickle
 import re
 
 def print_data_info(title, data):
+    print()
     print(f'########## {title} ############\nSIZE: {len(data)} items')
     print(data)
-    print()
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "rb"))
 
@@ -60,3 +60,7 @@ print_data_info('ENRON PERSONS WITH QUALIFIED SALARY', enron_data_person_with_qu
 
 enron_data_person_with_email_address = {person: enron_data[person]['email_address'] for person in enron_data_persons if enron_data[person]['email_address'] != 'NaN'}
 print_data_info('ENRON PERSONS WITH EMAIL ADDRESS', enron_data_person_with_email_address)
+
+enron_data_persons_without_quantified_salary= enron_data_persons - enron_data_person_with_quantified_salary.keys()
+print_data_info('ENRON PERSONS WITHOUT QUALIFIED SALARY', enron_data_persons_without_quantified_salary)
+print(f"% OF TOTAL: {len(enron_data_persons_without_quantified_salary)/len(enron_data_persons)}")
