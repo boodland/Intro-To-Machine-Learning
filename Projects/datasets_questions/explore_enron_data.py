@@ -54,3 +54,9 @@ print(f"Jeffrey K Skilling's value of stock options exercised = {enron_data['SKI
 print(f"Kenneth L Lay's total payments = {enron_data['LAY KENNETH L']['total_payments']}")
 print(f"Jeffrey K Skilling's total payments = {enron_data['SKILLING JEFFREY K']['total_payments']}")
 print(f"Andrew S Fastow's total payments = {enron_data['FASTOW ANDREW S']['total_payments']}")
+
+enron_data_person_with_quantified_salary = [person for person in enron_data_persons if enron_data[person]['salary'] != 'NaN']
+print_data_info('ENRON PERSONS WITH QUALIFIED SALARY', enron_data_person_with_quantified_salary)
+
+enron_data_person_with_email_address = [person for person in enron_data_persons if enron_data[person]['email_address'] != 'NaN']
+print_data_info('ENRON PERSONS WITH EMAIL ADDRESS', enron_data_person_with_email_address)
