@@ -45,8 +45,7 @@ reg.fit(feature_train, target_train)
 
 print(f"Slope: {reg.coef_}")
 print(f"Intercept: {reg.intercept_}")
-
-
+print(f"Score against train data: {reg.score(feature_train, target_train)}")
 
 ### draw the scatterplot, with color-coded training and testing points
 import matplotlib.pyplot as plt
