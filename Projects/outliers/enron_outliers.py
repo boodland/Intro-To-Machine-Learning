@@ -10,6 +10,7 @@ from feature_format import featureFormat, targetFeatureSplit
 data_dict = pickle.load( open("../final_project/final_project_dataset.pkl", "rb") )
 features = ["salary", "bonus"]
 data_dict.pop('TOTAL', 0)
+print([(person, values['salary'], values['bonus']) for person, values in data_dict.items() if (values['salary'] != 'NaN' and values['salary'] > 1000000) or (values['bonus'] != 'NaN' and values['bonus'] > 5000000)])
 data = featureFormat(data_dict, features)
 
 
