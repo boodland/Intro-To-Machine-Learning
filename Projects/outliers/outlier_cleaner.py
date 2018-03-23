@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 
 def outlierCleaner(predictions, ages, net_worths):
     """
@@ -11,10 +9,9 @@ def outlierCleaner(predictions, ages, net_worths):
         each tuple is of the form (age, net_worth, error).
     """
     
-    cleaned_data = []
-
-    ### your code goes here
-
-    
+    data_with_error = [(age[0], net_worth[0], (net_worth[0]-prediction[0])**2) for (prediction, age, net_worth) in zip(predictions, ages, net_worths)]
+    data_with_error_sorted = sorted(data_with_error, key=lambda tup: tup[2])
+    limit = int(len(data_with_error_sorted)*0.9)
+    cleaned_data = data_with_error_sorted[:limit]
     return cleaned_data
 
