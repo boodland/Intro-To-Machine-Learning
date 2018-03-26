@@ -45,19 +45,11 @@ data_dict.pop("TOTAL", 0)
 ### the input features we want to use 
 ### can be any key in the person-level dictionary (salary, director_fees, etc.) 
 feature_1 = "salary"
-feature_2 = "exercised_stock_options"
+feature_2 = "from_messages"
 poi  = "poi"
 features_list = [poi, feature_1, feature_2]
 data = featureFormat(data_dict, features_list )
 poi, finance_features = targetFeatureSplit( data )
-
-exercised_stock_options = [features[feature_2] for person, features in data_dict.items() if features[feature_2] != "NaN"]
-print(f'Maximum exercised stock options = {numpy.amax(exercised_stock_options)}')
-print(f'Minimum exercised stock options = {numpy.amin(exercised_stock_options)}')
-
-salaries = [features[feature_1] for person, features in data_dict.items() if features[feature_1] != "NaN"]
-print(f'Maximum salary = {numpy.amax(salaries)}')
-print(f'Minimum salary = {numpy.amin(salaries)}')
 
 ### in the "clustering with 3 features" part of the mini-project,
 ### you'll want to change this line to 
