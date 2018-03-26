@@ -51,7 +51,9 @@ poi  = "poi"
 features_list = [poi, feature_1, feature_2, feature_3]
 data = featureFormat(data_dict, features_list )
 poi, finance_features = targetFeatureSplit( data )
-
+exercised_stock_options = [features[1] for features in finance_features]
+print(f'Maximum exercised stock options = {numpy.amax(exercised_stock_options)}')
+print(f'Minumum exercised stock options = {numpy.amin(exercised_stock_options)}')
 
 ### in the "clustering with 3 features" part of the mini-project,
 ### you'll want to change this line to 
