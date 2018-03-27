@@ -32,7 +32,7 @@ def parseOutText(f):
         ### split the text string into individual words, stem each word,
         ### and append the stemmed word to words (make sure there's a single
         ### space between each stemmed word)
-        text_string_splitted = text_string.split(' ')
+        text_string_splitted = text_string.split()
 
         stemmer = SnowballStemmer("english")
         text_string_stemmed = [stemmer.stem(word) for word in text_string_splitted]
