@@ -45,4 +45,6 @@ from sklearn.metrics import accuracy_score
 acc = accuracy_score(pred, labels_test)
 
 print(f"Accuracy: {acc}")
+very_important_features = {index: feature for (index, feature) in enumerate(clf.feature_importances_) if feature > 0.1}
+print(f"Feature Importances: {very_important_features}")
 
