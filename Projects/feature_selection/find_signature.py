@@ -45,7 +45,7 @@ from sklearn.metrics import accuracy_score
 acc = accuracy_score(pred, labels_test)
 
 print(f"Accuracy: {acc}")
-very_important_features = {index: feature for (index, feature) in enumerate(clf.feature_importances_) if feature > 0.1}
+very_important_features = {index: feature for (index, feature) in enumerate(clf.feature_importances_) if feature > 0.2}
 print(f"Feature Importances: {very_important_features}")
 very_important_features_names = [vectorizer.get_feature_names()[feature_index] for feature_index in very_important_features]
 print(f"Feature Importances Names: {very_important_features_names}")
