@@ -39,5 +39,6 @@ pred = clf.predict(features_test)
 print("prediction time:", round(time()-t1, 3), "s")
 accuracy = accuracy_score(pred, labels_test)
 print(accuracy)
+print(f"Number of pois in test set: {sum(pred)}")
 print(f"People in test set: {len(features_test)}")
 
