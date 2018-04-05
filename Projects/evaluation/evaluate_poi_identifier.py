@@ -44,4 +44,4 @@ print(f"People in test set: {len(features_test)}")
 no_poi_pred = [0.] * len(pred)
 no_pois_accuracy = accuracy_score(no_poi_pred, labels_test)
 print(f"No pois accuracy: {no_pois_accuracy}")
-
+print(f"True test labels: {sum(pred*labels_test)}")
