@@ -45,3 +45,6 @@ no_poi_pred = [0.] * len(pred)
 no_pois_accuracy = accuracy_score(no_poi_pred, labels_test)
 print(f"No pois accuracy: {no_pois_accuracy}")
 print(f"True test labels: {sum(pred*labels_test)}")
+
+from sklearn.metrics import precision_score
+print(f"Precision score: {precision_score(labels_test, pred)}")
